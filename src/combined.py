@@ -1,17 +1,19 @@
-# UI용 모듈
-# import sys
-# from PyQt5.QtWidgets import *
-# from PyQt5.QtGui import *
-# from PyQt5 import uic
-# import urllib.request
-# matplot용 모듈
+# 시리얼 통신 모듈
 import serial
-import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation
-from queue import Queue
+# UI용 모듈
+import sys
+from PyQt5.QtWidgets import *
+from PyQt5.QtGui import *
+from PyQt5 import uic
+import urllib.request
+# matplot용 모듈
+# import matplotlib.pyplot as plt
+# from matplotlib.animation import FuncAnimation
+# from queue import Queue
 # DB용 코드
 import mysql.connector
 from datetime import datetime
+import re
 
 # DB에 접근
 remote = mysql.connector.connect(
@@ -22,74 +24,159 @@ remote = mysql.connector.connect(
     database = "IOT" # 기존에 만든 IOT 데이터베이스를 USE
 )
 
-# 현재날짜, 시간 테이블을 생성.
+# DB에 현재날짜, 시간 테이블을 생성.
 current_time = datetime.now()  # 일단 날짜 시간을 가져옴.
 current_time = current_time.strftime("%y_%m_%d_%H_%M_%S")  # 원하는 형식에 맞게 수정
 sql_command = f"CREATE TABLE log_{current_time} (timing int, Deg_X int, Deg_Y int, Deg_Z int, Servo_L int, Servo_R int)"
 cur = remote.cursor()
 cur.execute(sql_command)
 
-# # 아두이노 시리얼 통신 설정
+remote.close()
+
+# 아두이노 시리얼 통신 설정
 ser = serial.Serial(
-    port='/dev/ttyACM3',  # 연결할 때마다 바뀜
+    port='/dev/ttyACM0',  # 연결할 때마다 바뀜
     baudrate=9600
 )
 
-# 서브플롯 설정
-fig, axs = plt.subplots(5, 1, sharex=True, figsize=(6, 10))
+# 시리얼 패턴 정리
+pattern1 = r"(\d+), (\d+)"
+pattern2 = r"Deg_X: (\d+) \| Deg_Y: (\d+) \| Deg_Z: (\d+) \| ServoL: (\d+) \| ServoL: (\d+)"
 
-# 각 y축의 출력 범위 고정
-y_limits = [(-400, 400), (-400, 400), (-400, 400), (-200, 200), (-200, 200)]
-for idx, ax in enumerate(axs):
-    ax.set_ylim(y_limits[idx])
+# UI 코드
+from_class = uic.loadUiType("Giro.ui")[0]
 
-# 데이터 큐 초기화
-timing = Queue(maxsize=10); [timing.put(0) for _ in range(10)]
-degX = Queue(maxsize=10); [degX.put(0) for _ in range(10)]
-degY = Queue(maxsize=10); [degY.put(0) for _ in range(10)]
-degZ = Queue(maxsize=10); [degZ.put(0) for _ in range(10)]
-servoL = Queue(maxsize=10); [servoL.put(0) for _ in range(10)]
-servoR = Queue(maxsize=10); [servoR.put(0) for _ in range(10)]
+class WindowClass(QMainWindow, from_class):
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+        self.setWindowTitle("Controller")
 
-# 시간 값 초기화
-time_value = -1
-remote.close()
+        self.btn_status.clicked.connect(self.btnStatus)
+        self.stauts_s = 0
+        self.btn_mode.clicked.connect(self.btnMode)
+        self.status_m = 0
 
+        self.n9.clicked.connect(self.btn_n9)
+        self.n8.clicked.connect(self.btn_n8)
+        self.n7.clicked.connect(self.btn_n7)
+        self.n4.clicked.connect(self.btn_n6)
+        self.n5.clicked.connect(self.btn_n5)
+        self.n4.clicked.connect(self.btn_n4)
+        self.n3.clicked.connect(self.btn_n3)
+        self.n2.clicked.connect(self.btn_n2)
+        self.n1.clicked.connect(self.btn_n1)
+        self.n0.clicked.connect(self.btn_n0)
+        self.btndel.clicked.connect(self.btn_del)
+        self.btnset.clicked.connect(self.btn_set)
 
+        self.result = ""
 
-def update(frame):
-    # 전역변수를 사용하여 timing 갱신
-    global time_value  
-    time_value += 1
+        self.slider.valueChanged.connect(self.changeSilder)
     
-    data = ser.readline().decode().strip()  # 시리얼 데이터를 읽고 디코드.
-    values = data.split('|')
-    print(values)
-
-    timing.get()  # timing 큐에 시간 get
-    degX.get()  # DegX 큐에 값 get
-    degY.get()  # DegY 큐에 값 get
-    degZ.get()  # DegZ 큐에 값 get
-    servoL.get()  # servoL 큐에 값 get
-    servoR.get()  # servoR 큐에 값 get
-
-    timing.put(time_value)  # timing 큐에 시간 put
+    def changeSilder(self):
+        if self.status_m == 0:
+            the_val = " " + str(self.slider.value())
+            ser.write(the_val.encode('utf-8'))
     
-    degX.put(values[0])  # DegX 큐에 값 put
-    degY.put(values[1])  # DegY 큐에 값 put
-    degZ.put(values[2])  # DegZ 큐에 값 put
-    servoL.put(values[3])  # servoL 큐에 값 put
-    servoR.put(values[4])  # servoR 큐에 값 put
+    def btn_set(self):
+        if self.status_m == 0:
+            the_val = " " + self.result
+            print(self.result)
+            ser.write(the_val.encode('utf-8'))
+            self.result = ""
 
-    x_val = list(timing.queue)
-    degX_y_val = list(degX.queue)
-    degY_y_val = list(degY.queue)
-    degZ_y_val = list(degZ.queue)
-    servoL_y_val = list(servoL.queue)
-    servoR_y_val = list(servoR.queue)
-    line.set_data(x[:10], y[:10])
-    return line,
+    def btn_del(self):
+        if len(self.result) > 0:
+            self.result = self.result[:-1]
+            self.deg_visual.setText(self.result)
 
-ani = FuncAnimation(fig, update, blit=True)
+    def len_check(self):
+        if len(self.result) > 3:
+            self.result = self.result[:-1]
+            self.deg_visual.setText(self.result)
+    
+    def btn_n9(self):  # 9
+        self.result += "9"
+        self.deg_visual.setText(self.result)
+        self.len_check()
+        
+    def btn_n8(self):  # 8
+        self.result += "8"
+        self.deg_visual.setText(self.result)
+        self.len_check()
 
-plt.show()
+    def btn_n7(self):  # 7
+        self.result += "7"
+        self.deg_visual.setText(self.result)
+        self.len_check()
+
+    def btn_n6(self):  # 6
+        self.result += "6"
+        self.deg_visual.setText(self.result)
+        self.len_check()
+
+    def btn_n5(self):  # 5
+        self.result += "5"
+        self.deg_visual.setText(self.result)
+        self.len_check()
+
+    def btn_n4(self):  # 4
+        self.result += "4"
+        self.deg_visual.setText(self.result)
+        self.len_check()
+
+    def btn_n3(self):  # 3
+        self.result += "3"
+        self.deg_visual.setText(self.result)
+        self.len_check()
+
+    def btn_n2(self):  # 2
+        self.result += "2"
+        self.deg_visual.setText(self.result)
+        self.len_check()
+
+    def btn_n1(self):  # 1
+        self.result += "1"
+        self.deg_visual.setText(self.result)
+        self.len_check()
+
+    def btn_n0(self):  # 0
+        self.result += "0"
+        self.deg_visual.setText(self.result)
+        self.len_check()
+
+    def btnStatus(self):  # 시작/정지 버튼을 누르면...
+        ser.write(b's')
+        self.stauts_s = not self.stauts_s
+
+        if self.stauts_s == 1:
+            self.STATUS.setText("ON")
+            self.btn_status.setText("정지")
+            
+            self.status_m = 0
+            self.MODE.setText("MANUAL")
+
+        else:    
+            self.STATUS.setText("OFF")
+            self.MODE.setText("")
+            self.btn_status.setText("시작")
+        
+    def btnMode(self):  # 모드 설정 버튼을 누르면...
+        ser.write(b'm')
+        self.status_m = not self.status_m
+
+        if self.status_m == 1:
+            self.MODE.setText("AUTO")
+            self.btn_mode.setText("수동")
+        else:
+            self.MODE.setText("MANUAL")
+            self.btn_mode.setText("자동")
+
+# UI관련 코드
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    myWindows = WindowClass()
+    myWindows.show()
+
+    sys.exit(app.exec_())
