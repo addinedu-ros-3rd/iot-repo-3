@@ -12,12 +12,14 @@ int Servo_Pin2 = 10;
 Servo Servo1;
 Servo Servo2;
 
-char command = 'N'; // 시리얼에서 커맨드 값을 읽어오기 위한 변수
+char command; // 시리얼에서 커맨드 값을 읽어오기 위한 변수
 int n = 90;  // 수동 제어 모드일 때 각도를 읽어오기 위한 변수
 
 // 각 모드의 상태 값
 bool status = 0;  // 시작-정지. 시작이면 True, 정지면 False
 bool mode = 0; // 자동-수동 모드. 자동이면 True, 수동이면 False
+const int led_status = 7; // status가 정지인지 시작인지 확인하기 위한 led.
+const int led_mode = 8;
 
 //X,Y,Z축 각도를 받아올 변수 선언
 int Deg_X;
@@ -37,11 +39,14 @@ void setup() {
   // 서보모터 초기 각도 설정
   Servo1.write(90);
   Servo2.write(90);
+
+  // led 설정
+  pinMode(led_status, OUTPUT);
+  pinMode(led_mode, OUTPUT);
 }
 
 void loop()
 {
-
   if (Serial.available())  // 시리얼 버퍼가 차있을 때만 읽어옴
   {
     command = Serial.read();
@@ -74,15 +79,28 @@ void loop()
     }
     else  // 그렇지 않으면
     {
+      
       active_manual();  // 수동 모드 실행.
-    }  
+    }
   }
+  else  // 장치가 stop 상태이면
+  {
+    mode = 0;
+  }
+
+  digitalWrite(led_status, status);  // status를 확인하기 위한 led. 켜지면 ON.
+  digitalWrite(led_mode, mode);  // mode를 확인하기 위한 led. 켜지면 auto 모드.
+
+  Serial.print(status);
+  Serial.print(", ");
+  Serial.println(mode);
 }
 
 void active_manual()
 {
   if (Serial.available())
   {
+    delay(200);
     n = Serial.parseInt(); // 시리얼에서 서보모터를 기울일 각도를 가져옴.
     //  = command - 48;
     Serial.println(n);
