@@ -102,8 +102,6 @@ void active_manual()
   {
     delay(200);
     n = Serial.parseInt(); // 시리얼에서 서보모터를 기울일 각도를 가져옴.
-    //  = command - 48;
-    Serial.println(n);
     Servo1.write(n);
     Servo2.write(n);
   }
@@ -120,11 +118,11 @@ void active_auto()
   Servo2.write(90+Deg_Y);
   //Servo3.write(90-Deg_Z);
   // put your main code here, to run repeatedly:
-  Serial.print("Deg_X: "); Serial.print(Deg_X);
-  Serial.print(" | Deg_Y: "); Serial.print(Deg_Y);
-  Serial.print(" | Deg_Z: "); Serial.print(Deg_Z);
-  Serial.print(" | ServoL: "); Serial.print(90-Deg_Y);
-  Serial.print(" | ServoR: "); Serial.println(90-Deg_Y);
+  Serial.print(Deg_X);
+  Serial.print(", "); Serial.print(Deg_Y);
+  Serial.print(", "); Serial.print(Deg_Z);
+  Serial.print(", "); Serial.print(90-Deg_Y);
+  Serial.print(", "); Serial.println(90-Deg_Y);
 
   n = Deg_Y;  // 자동에서 수동으로 넘어갈 때, 갑작스런 움직임을 방지하기 위함.
 }
