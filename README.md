@@ -35,9 +35,9 @@ DoF(Degree of Freedom)이란 어떤 물체의 상태를 최소한으로 표시�
 # 회로도
 (귀가 후 프리짓으로 완성할 것)
 
+# 순서도
+## MCU
+![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/4b2f5ef3-edb4-48ad-8f19-d8525d8412cd)
+
 # UI
 ![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/3a4b27b8-d5bc-46a8-915f-4f201718dfed)
-
-# 순서도
-![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/96f92db4-0dec-4d4a-810c-234d3dd6610b)
-
