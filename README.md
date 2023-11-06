@@ -25,11 +25,8 @@
 + Raspbain
 + Amazon RDS
 
-# HW 구성 및 통신 방법
-![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/7ffaa145-7689-4a9c-8f15-131a01e22537)
-
-# 회로도
-(귀가 후 프리짓으로 완성할 것)
+# 구조 개념도
+![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/e1c9b9b6-5fde-4481-96aa-fe95a50dd260)
 
 # 순서도
 ## MCU
@@ -73,7 +70,9 @@
 
 
 # 기울기 시각화 테스트
-
+<p aling="center">
+<img src="https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/249c65d6-2cfa-49ad-b56c-311da40c7e41">
+</p>
 
 # 결과물 테스트
 
