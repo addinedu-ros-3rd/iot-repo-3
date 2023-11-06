@@ -25,10 +25,6 @@
 + Raspbain
 + Amazon RDS
 
-# 링크와 DoF
-DoF(Degree of Freedom)이란 어떤 물체의 상태를 최소한으로 표시할 수 있는 독립된 변수
-![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/71076cb7-0361-4724-a891-bf8914097383)
-
 # HW 구성 및 통신 방법
 ![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/7ffaa145-7689-4a9c-8f15-131a01e22537)
 
@@ -72,3 +68,17 @@ DoF(Degree of Freedom)이란 어떤 물체의 상태를 최소한으로 표시�
 
 7.(미구현) 기울기 시각화
 + 현재 제품의 기울기를 시각적으로 표현
+
+# HW 테스트
+
+
+# 기울기 시각화 테스트
+
+
+# 결과물 테스트
+
+
+# 결론 및 향후 계획
+현재 제품의 구조를 개선시키면 Y축의 기울기 뿐만 아니라 X, Y, Z축 모든 방향에 대한 수평을 유지할 수 있음.
+RC카 키트에 해당 제품을 결합시켜 실제 차량에 사용하여 최초 목표를 구현.
+RC카 키트에 카메라와 블루투스 모듈을 사용하여 라즈베리 파이와 통신함으로써 원격 제어.
