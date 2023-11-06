@@ -25,7 +25,11 @@
 + Raspbain
 + Amazon RDS
 
-# 구조 개념도
+# 구조 및 개념도
+## 최종 결과물 3D 모델링
+![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/3bf96650-a7c3-47b8-9f93-1a56324ecf90)
+
+## 개념도
 ![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/e1c9b9b6-5fde-4481-96aa-fe95a50dd260)
 
 # 순서도
@@ -67,7 +71,9 @@
 + 현재 제품의 기울기를 시각적으로 표현
 
 # HW 테스트
-
+<p>
+<img src="https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/1a06b8bf-b6ab-437a-9204-3089748e1502">
+</p>
 
 # 기울기 시각화 테스트
 <p aling="center">
@@ -75,7 +81,9 @@
 </p>
 
 # 결과물 테스트
-
+<p aling="center">
+<img src="https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/b0c172eb-9457-4566-b3ed-cfee55c09b50">
+</p>
 
 # 결론 및 향후 계획
 현재 제품의 구조를 개선시키면 Y축의 기울기 뿐만 아니라 X, Y, Z축 모든 방향에 대한 수평을 유지할 수 있음.
