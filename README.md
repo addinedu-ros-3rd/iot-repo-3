@@ -34,7 +34,7 @@
 ![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/3bf96650-a7c3-47b8-9f93-1a56324ecf90) 
 
 ## 개념도
-![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/e1c9b9b6-5fde-4481-96aa-fe95a50dd260)
+![Untitled Diagram (3)](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/143505396/83ff6690-b04e-4618-befa-dba7cb806518)
 
 ## DB
 ![Screenshot from 2023-11-07 13-42-16](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/143505396/88d7b755-baed-4a36-b974-cb475cb4cf30)
