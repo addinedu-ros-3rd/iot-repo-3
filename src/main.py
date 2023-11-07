@@ -40,7 +40,7 @@ g_buffer = None  # 글로벌 변수 선언. 자동모드에서 동작 로그를 
 tmp = 0  # 글로벌 변수 선언. 임시용
 
 # UI 파트(메인 코드)
-from_class = uic.loadUiType("serial.ui")[0]
+from_class = uic.loadUiType("final.ui")[0]
 
 class WindowClass(QMainWindow, from_class):
     def __init__(self):
