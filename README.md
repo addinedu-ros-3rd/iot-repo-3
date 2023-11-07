@@ -37,8 +37,7 @@
 ![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/e1c9b9b6-5fde-4481-96aa-fe95a50dd260)
 
 ## DB
-![Screenshot from 2023-11-07 13-41-27](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/143505396/81fdc8ba-f39f-4e5d-b2ec-55c21d78769f)
-
+![Screenshot from 2023-11-07 13-42-16](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/143505396/88d7b755-baed-4a36-b974-cb475cb4cf30)
 
 # 순서도
 ## MCU
