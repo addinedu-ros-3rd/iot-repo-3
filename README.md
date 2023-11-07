@@ -3,15 +3,15 @@
 + 실제 댐퍼는 유압 실린더를 사용한다는 점에서 기계적인 구조는 다르지만 HW 제어 방법은 동일하기 때문에 Servo Motor로 대체.
 
 # 조직원
-조장 김태헌
+**김태헌 조장**
 + UI 제작 및 DB 구축
 + MCU, DB 연동
 
-조원 박성준
+**박성준**
 + 수평 유지 알고리즘
 + 구조물 기울기 시각화
 
-조원 홍석진
+**홍석진**
 + 로봇 링크 구성
 + 3D 모델링 및 출력
 + 구조물 안전성 점검 및 개선
@@ -33,7 +33,7 @@
 ## 최종 결과물 3D 모델링
 ![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/3bf96650-a7c3-47b8-9f93-1a56324ecf90) 
 
-## 개념도
+## 시스템 구조
 ![Untitled Diagram (3)](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/143505396/83ff6690-b04e-4618-befa-dba7cb806518)
 
 ## DB
