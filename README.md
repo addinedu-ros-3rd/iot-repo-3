@@ -16,14 +16,18 @@
 + 3D 모델링 및 출력
 + 구조물 안전성 점검 및 개선
 
-# 사용 툴 및 장비
+# 사용 툴 
 + Window10
   + Autodesk Fusion360
 + Ubuntu 22.04
   + Arduino IDE
   + Vscode
-+ Raspbain
+
+# 사용 장비
++ Raspbain 3B+
 + Amazon RDS
++ Arduino uno
++ MG-996R
 
 # 구조 및 개념도
 ## 최종 결과물 3D 모델링
@@ -86,7 +90,9 @@
 </p>
 
 # 결론 
+UART 통신으로 아두이노와 PyQt 통신 성공.
 x축으로 수평 제어할 수 있었고 이를 graphwidget으로 x축 기울기 실기산 변화를 시각화함.
+
 
 # 향후 계획
 기계적 구조를 변형하여 X, Y축에 대한 수평을 유지할 수 있도록 제품을 개선할 것.
