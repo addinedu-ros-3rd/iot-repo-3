@@ -1,7 +1,7 @@
 # 주제: Self-Balancing Chair
 + Self-Balancing Chair와 RC카를 통하여 차량용 간이 댐퍼를 구현함으로써 흔들림을 감소시켜 편안한 승차감을 제공하는 것이 목적.
 + 실제 댐퍼는 유압 실린더를 사용한다는 점에서 기계적인 구조는 다르지만 HW 제어 방법은 동일하기 때문에 Servo Motor로 대체.
-test1
+  김태헌 바보
 # 조직원
 조장 김태헌
 + UI 제작 및 DB 구축
