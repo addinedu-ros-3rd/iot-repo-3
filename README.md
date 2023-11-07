@@ -40,7 +40,8 @@
 ![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/2f198337-5b1b-4a68-a6d0-7184507e4866)
 
 ## DB2
-!"![Uploading Screenshot from 2023-11-07 13-29-55.png…]()"
+![Screenshot from 2023-11-07 13-34-54](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/143505396/519c1298-98e8-4345-bfe0-9875fd5711b8)
+
 
 # 순서도
 ## MCU
