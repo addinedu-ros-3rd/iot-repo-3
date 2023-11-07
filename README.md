@@ -39,6 +39,8 @@
 ## DB
 ![Screenshot from 2023-11-07 13-42-16](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/143505396/88d7b755-baed-4a36-b974-cb475cb4cf30)
 
+변수 5개 Deg_X, Deg_Y, Deg_Z, Servo R, Servo L를 데이터베이스에 실시간으로 저장하였다.
+
 # 순서도
 ## MCU
 ![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/4b2f5ef3-edb4-48ad-8f19-d8525d8412cd)
