@@ -27,7 +27,7 @@
 
 # 구조 및 개념도
 ## 최종 결과물 3D 모델링
-![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/3bf96650-a7c3-47b8-9f93-1a56324ecf90)
+![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/3bf96650-a7c3-47b8-9f93-1a56324ecf90) 
 
 ## 개념도
 ![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/e1c9b9b6-5fde-4481-96aa-fe95a50dd260)
