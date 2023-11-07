@@ -37,10 +37,7 @@
 ![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/e1c9b9b6-5fde-4481-96aa-fe95a50dd260)
 
 ## DB
-![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/2f198337-5b1b-4a68-a6d0-7184507e4866)
-
-## DB2
-![Screenshot from 2023-11-07 13-34-54](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/143505396/519c1298-98e8-4345-bfe0-9875fd5711b8)
+![Screenshot from 2023-11-07 13-41-27](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/143505396/81fdc8ba-f39f-4e5d-b2ec-55c21d78769f)
 
 
 # 순서도
