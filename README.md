@@ -36,6 +36,9 @@
 ## 개념도
 ![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/e1c9b9b6-5fde-4481-96aa-fe95a50dd260)
 
+## DB
+![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/2f198337-5b1b-4a68-a6d0-7184507e4866)
+
 # 순서도
 ## MCU
 ![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/4b2f5ef3-edb4-48ad-8f19-d8525d8412cd)
