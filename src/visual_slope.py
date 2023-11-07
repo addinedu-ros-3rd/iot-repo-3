@@ -15,7 +15,7 @@ import time
 import pyqtgraph as pg
 from pyqtgraph import PlotWidget, plot
 import math
-from_class = uic.loadUiType("freq_code.ui")[0]
+from_class = uic.loadUiType("visual_slope.ui")[0]
 class WindowClass(QMainWindow, from_class):
     def __init__(self):
         super().__init__()
