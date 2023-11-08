@@ -3,7 +3,7 @@
 + 실제 댐퍼는 유압 실린더를 사용한다는 점에서 기계적인 구조는 다르다. 하지만 HW 제어 방법은 동일하기 때문에 Servo Motor로 대체.
 
 # 조직원
-**김태헌 조장**
+**김태헌** 조장
 + UI 제작 및 DB 구축
 + MCU, DB 연동
 
@@ -43,7 +43,7 @@
 
 # 순서도
 ## MCU
-![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/4b2f5ef3-edb4-48ad-8f19-d8525d8412cd)
+![Screenshot from 2023-11-07 18-14-23](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/143505396/ea17349c-2ba5-4a4d-abfa-2f13a47d05d0)
 
 ## AUTO Mode
 ![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/2392ad6b-61fd-4ad9-8796-62dcf27f3c48)
