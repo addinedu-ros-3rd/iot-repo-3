@@ -1,6 +1,6 @@
 # 프로젝트 소개
 <h3>수평 유지 밸런싱 체어</h3>
-# 어쩌고 저꺼고 명칭이 납득가도록 설명할것
+<h3>험준한 곳에서도 안정감을 유지할 수 있는 밸런싱 의자 구현<h3>
 
 # 시스템 구조
 ![Untitled Diagram (3)](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/143505396/83ff6690-b04e-4618-befa-dba7cb806518)
@@ -20,19 +20,16 @@
 + 구조물 안전성 점검 및 개선
 
 # 사용 툴 
-+ Autodesk Fusion360
-+ Ubuntu 22.04
+
 <img src="https://img.shields.io/badge/Ubuntu 22.04-E95420?style=flat-square&logo=Ubuntu&logoColor=white"/>
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/>
 <img src="https://img.shields.io/badge/Arduino-00878F?style=flat-square&logo=Arduino&logoColor=white"/>
 <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat-square&logo=Visual Studio Code&logoColor=white"/>
-<img src="https://img.shields.io/badge/Autodesk Fusion 360-000000?style=flat-square&logo=Autodesk Fusion 360&logoColor=white"/>
-
+<img src="https://img.shields.io/badge/Autodesk Fusion 360-000000?style=flat-square&logo=autodesk&logoColor=white"/>
+<img src="https://img.shields.io/badge/AMAZON RDS-527FFF?style=flat-square&logo=amazonrds&logoColor=white"/>
 
 # 사용 장비
 + Raspbain 3B+
-+ Amazon RDS
-
 + MG-996R
 
 # 구조 및 개념도
