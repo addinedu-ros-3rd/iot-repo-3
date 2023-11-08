@@ -36,10 +36,10 @@
 ## 최종 결과물 3D 모델링
 ![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/3bf96650-a7c3-47b8-9f93-1a56324ecf90) 
 
-## 데이터 구조
-![Screenshot from 2023-11-07 13-42-16](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/143505396/88d7b755-baed-4a36-b974-cb475cb4cf30)
+## 시퀸스 다이어그램
+![Screenshot from 2023-11-08 15-09-16](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/143505396/4af92f7e-b3aa-41e9-9a83-c10a6f69de26)
 
-변수 5개 Deg_X, Deg_Y, Deg_Z, Servo R, Servo L를 데이터베이스에 실시간으로 저장하였다.
+변수 Deg_X, Deg_Y, Deg_Z, Target Degree를 데이터베이스에 실시간으로 저장하였다.
 
 # 순서도
 ## MCU
@@ -67,7 +67,6 @@
 + status = 0일 경우, '시작'으로 표시되어 제품이 ON 모드에 들어갈 수 있다는 것을 표시.
 
 4.자동/수동 버튼: 누를 경우 시리얼 통신으로 아두이노에 'm'이라는 문자를 전달.
-* 자동으로 밸런싱 의자가 작동하기 전에 테스트용으로 확인하기 위해서 의도적으로 수동 설정 추가함.   
 + mode = 1일 경우, '수동'으로 표시되어 제품이 '자동' 모드에 들어갈 수 있다는 것을 표시.
 + mode = 0일 경우, '자동'으로 표시되어 제품이 '수동' 모드에 들어갈 수 있다는 것을 표시.
 
