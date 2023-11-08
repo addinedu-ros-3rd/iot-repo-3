@@ -1,6 +1,9 @@
-# 주제: Self-Balancing Chair
-+ Self-Balancing Chair를 통해서 간이 댐퍼를 구현함으로써 흔들림을 감소시켜 편안한 승차감을 제공하는 것이 목적.
-+ 실제 댐퍼는 유압 실린더를 사용한다는 점에서 기계적인 구조는 다르다. 하지만 HW 제어 방법은 동일하기 때문에 Servo Motor로 대체.
+# 프로젝트 소개
+<h3>수평 유지 밸런싱 체어</h3>
+# 어쩌고 저꺼고 명칭이 납득가도록 설명할것
+
+# 시스템 구조
+![Untitled Diagram (3)](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/143505396/83ff6690-b04e-4618-befa-dba7cb806518)
 
 # 조직원
 **김태헌** 조장
@@ -17,26 +20,26 @@
 + 구조물 안전성 점검 및 개선
 
 # 사용 툴 
-+ Window10
-  + Autodesk Fusion360
++ Autodesk Fusion360
 + Ubuntu 22.04
-  + Arduino IDE
-  + Vscode
+<img src="https://img.shields.io/badge/Ubuntu 22.04-E95420?style=flat-square&logo=Ubuntu&logoColor=white"/>
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/>
+<img src="https://img.shields.io/badge/Arduino-00878F?style=flat-square&logo=Arduino&logoColor=white"/>
+<img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat-square&logo=Visual Studio Code&logoColor=white"/>
+<img src="https://img.shields.io/badge/Autodesk Fusion 360-000000?style=flat-square&logo=Autodesk Fusion 360&logoColor=white"/>
+
 
 # 사용 장비
 + Raspbain 3B+
 + Amazon RDS
-+ Arduino uno
+
 + MG-996R
 
 # 구조 및 개념도
 ## 최종 결과물 3D 모델링
 ![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/3bf96650-a7c3-47b8-9f93-1a56324ecf90) 
 
-## 시스템 구조
-![Untitled Diagram (3)](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/143505396/83ff6690-b04e-4618-befa-dba7cb806518)
-
-## DB
+## 데이터 구조
 ![Screenshot from 2023-11-07 13-42-16](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/143505396/88d7b755-baed-4a36-b974-cb475cb4cf30)
 
 변수 5개 Deg_X, Deg_Y, Deg_Z, Servo R, Servo L를 데이터베이스에 실시간으로 저장하였다.
