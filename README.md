@@ -38,8 +38,9 @@
 
 ## 시퀸스 다이어그램
 ![Screenshot from 2023-11-08 15-09-16](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/143505396/4af92f7e-b3aa-41e9-9a83-c10a6f69de26)
-안전성을 확인하기 위하여 수동모드를 구현했다. 
-변수 Deg_X, Deg_Y, Deg_Z, Target Degree를 데이터베이스에 실시간으로 저장하였다.
+
++안전성을 확인하기 위하여 수동모드를 구현했다. 
++변수 Deg_X, Deg_Y, Deg_Z, Target Degree를 데이터베이스에 실시간으로 저장하였다.
 
 # 순서도
 ## MCU
