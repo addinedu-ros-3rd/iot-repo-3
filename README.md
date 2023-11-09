@@ -51,6 +51,9 @@
 # UI
 ![image](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/146147393/3f48f908-1141-411d-839a-1d16ebdc1dbc)
 
+# UI 실행 
+![20231108_175725](https://github.com/addinedu-ros-3rd/iot-repo-3/assets/143505396/ef1439a9-bc3c-475b-8b62-499495ef5829)
+
 1.STATUS. 아두이노의 status 변수에 따라 값이 변함.
 + status = 1일 경우, ON으로 표시되어 제품이 수동/자동 모드로 동작될 수 있는 상태.
 + status = 0일 경우, OFF로 표시되어 제품이 어떠한 동작을 하지 않는 상태.
